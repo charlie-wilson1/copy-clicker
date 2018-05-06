@@ -101,6 +101,7 @@ router.get(
   '/current',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
+    // could make this a custom item instead, vid 12, last minute
     res.json(req.user);
   }
 );

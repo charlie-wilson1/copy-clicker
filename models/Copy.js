@@ -2,26 +2,28 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 //Create schema
-// TODO: update this
 const CopySchema = new Schema({
-  name: {
+  category: {
     type: String,
     required: true
   },
-  email: {
+  subject: {
     type: String,
     required: true
   },
-  password: {
+  body: {
     type: String,
     required: true
   },
-  avatar: {
+  author: {
+    type: String,
+    required: true
+  },
+  sequence_name: {
     type: String
   },
-  date: {
-    type: Date,
-    default: Date.now
+  sequence_position: {
+    type: Number
   }
 });
 

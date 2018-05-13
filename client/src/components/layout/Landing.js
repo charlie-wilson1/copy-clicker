@@ -10,8 +10,10 @@ class Landing extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-12 text-center">
-                  <h1 className="display-3 mb-4">Click. Customize. Copy.</h1>
-                  <p className="lead"> It's as easy as that.</p>
+                  <h1 className="display-3 mb-4">
+                    Focus on Selling, Not on Writing Copy.
+                  </h1>
+                  <p className="lead">Handcrafted Copy is just a click away.</p>
                   <hr />
                   <Link to="/register" className="btn btn-lg btn-info mr-2">
                     Sign Up
@@ -29,13 +31,26 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-4">
-                <h2>HOWDY</h2>
+                <img
+                  src={window.location.origin + '/img/bulletin_board.png'}
+                  className="mx-auto d-block"
+                  max-width="256px"
+                />
+                <h2 className="text-center">Click.</h2>
               </div>
               <div className="col-md-4">
-                <h2>HOWDY</h2>
+                <img
+                  src={window.location.origin + '/img/pencil_tip.png'}
+                  className="mx-auto d-block"
+                />
+                <h2 className="text-center">Customize.</h2>
               </div>
               <div className="col-md-4">
-                <h2>HOWDY</h2>
+                <img
+                  src={window.location.origin + '/img/lightbulb_idea.png'}
+                  className="mx-auto d-block"
+                />
+                <h2 className="text-center">Copy.</h2>
               </div>
             </div>
           </div>

@@ -77,9 +77,9 @@ class Landing extends Component {
                   className="mx-auto d-block home-img"
                 />
                 <h2 className="text-center">Click.</h2>
-                <p className="lead">
-                  Click and choose from{' '}
-                  <strong>hundreds of pre-written copy pieces.</strong>
+                <p className="lead pt-2">
+                  Click and choose from <strong>hundreds of snippets</strong> in
+                  multiple niches.
                 </p>
               </div>
               <div className="col-md-4">
@@ -88,7 +88,7 @@ class Landing extends Component {
                   className="mx-auto d-block home-img-2"
                 />
                 <h2 className="text-center">Customize.</h2>
-                <p className="lead">
+                <p className="lead pt-2">
                   Customize your selection to <strong>make it your own</strong>{' '}
                   or save it for later.
                 </p>
@@ -99,9 +99,9 @@ class Landing extends Component {
                   className="mx-auto d-block home-img-2"
                 />
                 <h2 className="text-center">Copy.</h2>
-                <p className="lead">
-                  Copy your new content into your{' '}
-                  <strong>exisiting sales process.</strong>
+                <p className="lead pt-2">
+                  Copy your new content into your sales process...{' '}
+                  <strong> Step 3: PROFIT.</strong>
                 </p>
               </div>
             </div>

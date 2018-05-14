@@ -2,19 +2,61 @@ img {
   /* width: 100%; */
 }
 
-.landing {
+.Typist {
+  display: inline;
+}
+
+.home-img {
+  max-height: 160px;
+}
+.home-img-2 {
+  margin: 20px 0px;
+  max-height: 120px;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.btn-signup {
+  border-bottom: 3px solid #5effba;
+  color: white !important;
+}
+
+.btn-login {
+  border-bottom: 3px solid #ffd561;
+  color: white !important;
+  margin-left: 15px;
+}
+
+.btn-2-signup {
+  background-color: #5effba;
+  color: #000000;
+  border-radius: 0;
+}
+
+.btn-2-login {
+  background-color: #ffd561;
+  color: #000000;
+  border-radius: 0;
+}
+
+.section-2 {
+  background-color: #d1d1d1 !important;
+}
+
+/* .landing {
   position: relative;
   background: url('./img/showcase.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   margin-top: -24px;
-  /* margin-bottom: -50px; */
 }
 
 .landing-inner {
   padding-top: 80px;
-}
+} */
 
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.7);

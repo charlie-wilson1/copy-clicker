@@ -8,6 +8,10 @@ img {
   margin-right: 10px;
 }
 
+.section-cta {
+  background-color: #5fffbb;
+}
+
 .logo-text {
   font-family: 'Bree Serif', serif;
   font-size: 22px;
@@ -29,6 +33,19 @@ img {
   background-color: black;
 }
 
+.homepage-banner {
+  background-color: #ffa18d;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  margin-left: auto;
+  border: 5px solid black;
+  margin-right: auto;
+  display: block;
+  width: fit-content;
+  display: inline-block;
+}
+
 .btn-signup {
   border-bottom: 3px solid #5effba;
   color: white !important;
@@ -44,6 +61,15 @@ img {
   background-color: #5effba;
   color: #000000;
   border-radius: 0;
+}
+
+.btn-3-signup {
+  display: inline-block;
+  background-color: #ffd561;
+  border: 5px solid black;
+  margin: 10px;
+  border-radius: 0;
+  color: black;
 }
 
 .btn-2-login {

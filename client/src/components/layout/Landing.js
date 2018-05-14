@@ -89,6 +89,24 @@ class Landing extends Component {
             </div>
           </div>
         </section>
+
+        <section className="section-cta py-5">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12 text-center">
+                <h2 className="homepage-banner text-center">
+                  What are you waiting for?
+                </h2>
+                <Link to="/register" className="btn btn-lg mr-2 btn-3-signup">
+                  Sign Up
+                </Link>
+                {/* <Link to="/login" className="btn btn-lg btn-light btn-2-login">
+                  Login
+                </Link> */}
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     );
   }

@@ -6,11 +6,13 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-black mb-4">
         <div className="container">
-          <i class="fas fa-quote-left logo" />
-
           <Link className="navbar-brand logo-text" to="/">
+            <i class="fas fa-quote-left logo" />
             CopyClicker
           </Link>
+
+          {/* <i class="fas fa-quote-right logo" /> */}
+
           <button
             className="navbar-toggler"
             type="button"

@@ -17,7 +17,7 @@ class Landing extends Component {
       <div>
         {/* <div className="landing"> */}
         {/* <div className="dark-overlay landing-inner text-light"> */}
-        <section class="my-5">
+        <section class="my-5 py-3">
           <div className="container">
             <div className="row">
               <div className="col-md-12">
@@ -50,7 +50,7 @@ class Landing extends Component {
           </div>
         </section>
 
-        <section className="bg-light bg-dark section-2">
+        <section className="bg-light bg-dark section-2 py-4">
           <div className="container">
             <div className="row">
               <div className="col-md-4">
@@ -60,8 +60,8 @@ class Landing extends Component {
                 />
                 <h2 className="text-center">Click.</h2>
                 <p className="lead">
-                  Click through our library of over 100 pre-written copy
-                  segments. More are added every week.
+                  Click and choose from{' '}
+                  <strong>hundreds of pre-written copy pieces.</strong>
                 </p>
               </div>
               <div className="col-md-4">
@@ -71,8 +71,8 @@ class Landing extends Component {
                 />
                 <h2 className="text-center">Customize.</h2>
                 <p className="lead">
-                  Customize the copy you choose to cater it towards your
-                  audience. Use our AI tips to streamline your process.
+                  Customize your selection to <strong>make it your own</strong>{' '}
+                  or save it for later.
                 </p>
               </div>
               <div className="col-md-4">
@@ -82,8 +82,8 @@ class Landing extends Component {
                 />
                 <h2 className="text-center">Copy.</h2>
                 <p className="lead">
-                  Copy your copy into your pre-existing tools. Sell more with
-                  smarter copy.
+                  Copy your new content into your{' '}
+                  <strong>exisiting sales process.</strong>
                 </p>
               </div>
             </div>

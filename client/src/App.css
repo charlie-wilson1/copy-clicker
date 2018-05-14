@@ -72,6 +72,12 @@ img {
   color: black;
 }
 
+.display-4 {
+  font-family: 'Bree Serif', serif;
+}
+h2 {
+  font-family: 'Bree Serif', serif;
+}
 .btn-2-login {
   background-color: #ffd561;
   color: #000000;
@@ -79,7 +85,8 @@ img {
 }
 
 .section-2 {
-  background-color: #d1d1d1 !important;
+  /* background-color: #d1d1d1 !important; */
+  background-color: #eaeaea !important;
 }
 
 /* .landing {
@@ -104,6 +111,9 @@ img {
   height: 100%;
 }
 
+.section-pink {
+  background-color: pink;
+}
 .card-form {
   opacity: 0.9;
 }

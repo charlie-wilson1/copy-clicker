@@ -22,7 +22,7 @@ class Landing extends Component {
             <div className="row">
               <div className="col-md-12">
                 <h1 className="display-4 mb-4 text-left">
-                  Handcrafted & Proven:{' '}
+                  Professionally Written:{' '}
                   <TypistLoop interval={1000}>
                     {['Emails', 'Sequences', 'SMS', 'Scripts', 'Copy'].map(
                       text => (
@@ -34,8 +34,12 @@ class Landing extends Component {
                   </TypistLoop>
                 </h1>
                 <p className="lead text-left">
-                  Focus on selling. Not on writing.
+                  {/* <strong>Focus on selling</strong>  We've got your copy
+                  covered  */}
+                  <strong>We write copy so you don't have to</strong> ✏️ Just
+                  customize & sell 💰 sell 💰 sell 💰
                 </p>
+
                 <hr />
                 <Link to="/register" className="btn btn-lg mr-2 btn-2-signup">
                   Sign Up
@@ -50,7 +54,21 @@ class Landing extends Component {
           </div>
         </section>
 
-        <section className="bg-light bg-dark section-2 py-4">
+        <section className=" py-3 pt-4  section-salmon">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <p className="lead text-center">
+                  <strong>
+                    Written with landing pages 🖥 , ads 💰, websites 💻, emails
+                    💌, text messages 📱, and phone calls ☎️ in mind.
+                  </strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="bg-light bg-dark section-2 py-4 ">
           <div className="container">
             <div className="row">
               <div className="col-md-4">

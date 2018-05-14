@@ -111,6 +111,11 @@ h2 {
   height: 100%;
 }
 
+.section-salmon {
+  background-color: #ffa18d !important;
+  margin-bottom: -10px;
+}
+
 .section-pink {
   background-color: pink;
 }

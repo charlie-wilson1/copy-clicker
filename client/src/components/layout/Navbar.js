@@ -6,7 +6,9 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-black mb-4">
         <div className="container">
-          <Link className="navbar-brand" to="/">
+          <i class="fas fa-quote-left logo" />
+
+          <Link className="navbar-brand logo-text" to="/">
             CopyClicker
           </Link>
           <button
@@ -23,7 +25,13 @@ class Navbar extends Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/profile">
                   {' '}
-                  Developers
+                  Try It
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/profile">
+                  {' '}
+                  FAQ
                 </Link>
               </li>
             </ul>

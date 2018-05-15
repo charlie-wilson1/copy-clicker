@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { withRouter } from 'react-router-dom';
+
+import { connect } from 'react-redux';
+import { loginUser } from '../../actions/authActions';
 
 class Login extends Component {
   constructor() {
@@ -16,6 +20,12 @@ class Login extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
+    }
+  }
+
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
@@ -29,6 +39,7 @@ class Login extends Component {
     };
 
     // console.log(user);
+    this.props.loginUser(user, this.props.history);
   }
 
   render() {
@@ -41,7 +52,7 @@ class Login extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-5 m-auto">
-                  <div classNamew="card">
+                  <div className="card">
                     <div className="card-body bg-white card-login">
                       {/* cb */}
                       <h1 className="display-4 text-center">Log In</h1>
@@ -108,4 +119,15 @@ class Login extends Component {
   }
 }
 
-export default Login;
+Login.propTypes = {
+  loginUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+
+export default connect(mapStateToProps, { loginUser })(withRouter(Login));

@@ -15,6 +15,8 @@ import Login from './components/auth/Login';
 import Terms from './components/corporate/Terms';
 import Privacy from './components/corporate/Privacy';
 
+import { logoutUser } from './actions/authActions';
+
 import './App.css';
 
 // check for token
@@ -25,6 +27,17 @@ if (localStorage.jwtToken) {
   const decoded = jwt_decode(localStorage.jwtToken);
   // set user and isauthenicated
   store.dispatch(setCurrentUser(decoded));
+
+  // check for expired token
+  const currentTime = Date.now() / 1000;
+  if (decoded.exp < currentTime) {
+    //logout the user
+    store.dispatch(logoutUser());
+    //TODO clear the current profile
+
+    // redirect to login
+    window.location.href('/login');
+  }
 }
 
 class App extends Component {

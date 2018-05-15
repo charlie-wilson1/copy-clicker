@@ -16,6 +16,7 @@ img {
 
 .section-cta {
   background-color: #5fffbb;
+  background-image: url('https://www.transparenttextures.com/patterns/scribble-light.png');
 }
 
 .logo-text {
@@ -40,16 +41,16 @@ img {
 }
 
 .homepage-banner {
-  background-color: #ffa18d;
-  color: white;
-  display: inline-block;
+  /* background-color: #ffa18d; */
+  /* color: white; */
+  /* display: inline-block; */
   padding: 10px;
-  margin-left: auto;
-  border: 5px solid black;
-  margin-right: auto;
-  display: block;
-  width: fit-content;
-  display: inline-block;
+  /* margin-left: auto; */
+  /* border: 5px solid black; */
+  /* margin-right: auto; */
+  /* display: block; */
+  /* width: fit-content; */
+  /* display: inline-block; */
 }
 
 .btn-signup {
@@ -127,6 +128,10 @@ h2 {
 .section-salmon {
   background-color: #ffa18d !important;
   margin-bottom: -10px;
+
+  background-color: #ffa18d;
+  background-image: url('https://www.transparenttextures.com/patterns/scribble-light.png');
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .section-pink {

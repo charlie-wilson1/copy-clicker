@@ -21,6 +21,9 @@ class Login extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    if (nextProps.auth.isAuthenicated) {
+      this.props.history.push('/dashboard');
+    }
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
@@ -33,13 +36,13 @@ class Login extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const user = {
+    const userData = {
       email: this.state.email,
       password: this.state.password
     };
 
     // console.log(user);
-    this.props.loginUser(user, this.props.history);
+    this.props.loginUser(userData, this.props.history);
   }
 
   render() {
@@ -67,7 +70,7 @@ class Login extends Component {
                             className={classnames(
                               'form-control form-control-lg rounded-0',
                               {
-                                'is-invalid': errors.name
+                                'is-invalid': errors.email
                               }
                             )}
                             placeholder="Email Address"

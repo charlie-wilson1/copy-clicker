@@ -7,11 +7,9 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-sm navbar-dark bg-black">
         <div className="container">
           <Link className="navbar-brand logo-text" to="/">
-            <i class="fas fa-quote-left logo" />
+            <i className="fas fa-quote-left logo" />
             CopyClicker
           </Link>
-
-          {/* <i class="fas fa-quote-right logo" /> */}
 
           <button
             className="navbar-toggler"

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-black mb-4">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-black">
         <div className="container">
           <Link className="navbar-brand logo-text" to="/">
             <i class="fas fa-quote-left logo" />
@@ -25,13 +25,13 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="mobile-nav">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/profile">
+                <Link className="nav-link btn-signup" to="/profile">
                   {' '}
                   Try It
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/profile">
+                <Link className="nav-link btn-login" to="/profile">
                   {' '}
                   FAQ
                 </Link>

@@ -35,55 +35,74 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="login section-pink">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-4 m-auto">
-              <h1 className="display-4 text-center">Log In</h1>
-              <p className="lead text-center">
-                Sign in to your CopyClicker account
-              </p>
-              <form noValidate onSubmit={this.onSubmit}>
-                <div className="form-group">
-                  <input
-                    type="email"
-                    // className="form-control form-control-lg"
-                    className={classnames('form-control form-control-lg', {
-                      'is-invalid': errors.name
-                    })}
-                    placeholder="Email Address"
-                    name="email"
-                    value={this.state.email}
-                    onChange={this.onChange}
-                  />
-                  {errors.email && (
-                    <div className="invalid-feedback">{errors.email}</div>
-                  )}
+      <div>
+        <section className="section-salmon py-5">
+          <div className="login">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-5 m-auto">
+                  <div classNamew="card">
+                    <div className="card-body bg-white card-login">
+                      {/* cb */}
+                      <h1 className="display-4 text-center">Log In</h1>
+                      <p className="lead text-center">
+                        Sign in to your CopyClicker account
+                      </p>
+                      <form noValidate onSubmit={this.onSubmit}>
+                        <div className="form-group">
+                          <input
+                            type="email"
+                            // className="form-control form-control-lg"
+                            className={classnames(
+                              'form-control form-control-lg rounded-0',
+                              {
+                                'is-invalid': errors.name
+                              }
+                            )}
+                            placeholder="Email Address"
+                            name="email"
+                            value={this.state.email}
+                            onChange={this.onChange}
+                          />
+                          {errors.email && (
+                            <div className="invalid-feedback">
+                              {errors.email}
+                            </div>
+                          )}
+                        </div>
+                        <div className="form-group">
+                          <input
+                            type="password"
+                            // className="form-control form-control-lg"
+                            className={classnames(
+                              'form-control form-control-lg rounded-0',
+                              {
+                                'is-invalid': errors.password
+                              }
+                            )}
+                            placeholder="Password"
+                            name="password"
+                            value={this.state.password}
+                            onChange={this.onChange}
+                          />
+                          {errors.password && (
+                            <div className="invalid-feedback">
+                              {errors.password}
+                            </div>
+                          )}
+                        </div>
+                        <input
+                          type="submit"
+                          className="btn btn-lg btn-info btn-block mt-4 rounded-0 btn-submit"
+                        />
+                      </form>
+                    </div>
+                  </div>
                 </div>
-                <div className="form-group">
-                  <input
-                    type="password"
-                    // className="form-control form-control-lg"
-                    className={classnames('form-control form-control-lg', {
-                      'is-invalid': errors.password
-                    })}
-                    placeholder="Password"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.onChange}
-                  />
-                  {errors.password && (
-                    <div className="invalid-feedback">{errors.password}</div>
-                  )}
-                </div>
-                <input
-                  type="submit"
-                  className="btn btn-lg btn-info btn-block mt-4"
-                />
-              </form>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     );
   }

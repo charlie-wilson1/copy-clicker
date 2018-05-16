@@ -17,6 +17,7 @@ import Login from './components/auth/Login';
 import Terms from './components/corporate/Terms';
 
 import Dashboard from './components/dashboard/Dashboard';
+import CreateProfile from './components/create-profile/CreateProfile';
 import Privacy from './components/corporate/Privacy';
 
 import { logoutUser } from './actions/authActions';
@@ -61,6 +62,13 @@ class App extends Component {
               <Route exact path="/privacy" component={Privacy} />
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
+                  path="/create-profile"
+                  component={CreateProfile}
+                />
               </Switch>
             </div>
             <Footer />

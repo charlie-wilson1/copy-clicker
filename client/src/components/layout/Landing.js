@@ -6,14 +6,6 @@ import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 
 class Landing extends Component {
-  // return (
-  constructor() {
-    super();
-    // const words = ['one', 'two', 'three'];
-  }
-
-  // )
-
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
       this.props.history.push('/dashboard');
@@ -23,29 +15,36 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        {/* <div className="landing"> */}
-        {/* <div className="dark-overlay landing-inner text-light"> */}
-        <section class="my-5 py-3">
+        <section className="my-5 py-3">
           <div className="container">
             <div className="row">
               <div className="col-md-12">
                 <h1 className="display-4 mb-4 text-left">
-                  Professionally Written:{' '}
+                  Ready to Use:{' '}
                   <TypistLoop interval={1000}>
-                    {['Emails', 'Sequences', 'SMS', 'Scripts', 'Copy'].map(
-                      text => (
-                        <Typist key={text} startDelay={1000}>
-                          {text}
-                        </Typist>
-                      )
-                    )}
+                    {[
+                      'Email Sequences',
+                      'Text Messages',
+                      'Call Scripts',
+                      'Headlines',
+                      'Ads',
+                      'Emails',
+                      'Product Descriptions',
+                      'Copy'
+                    ].map(text => (
+                      <Typist key={text} startDelay={1000}>
+                        {text}
+                      </Typist>
+                    ))}
                   </TypistLoop>
                 </h1>
                 <p className="lead text-left">
-                  {/* <strong>Focus on selling</strong>  We've got your copy
-                  covered  */}
-                  <strong>We write copy so you don't have to</strong> ✏️ Just
-                  customize & sell 💰 sell 💰 sell 💰
+                  <strong>Prewritten, professional copy:</strong> Just customize
+                  & sell, sell, sell
+                  <span role="img" alt="">
+                    {' '}
+                    💰💰💰
+                  </span>
                 </p>
 
                 <hr />
@@ -57,8 +56,6 @@ class Landing extends Component {
                 </Link>
               </div>
             </div>
-            {/* </div> */}
-            {/* </div> */}
           </div>
         </section>
 
@@ -68,8 +65,26 @@ class Landing extends Component {
               <div className="col-md-12">
                 <p className="lead text-center">
                   <strong>
-                    Written with landing pages 🖥 , ads 💰, websites 💻, emails
-                    💌, text messages 📱, and phone calls ☎️ in mind.
+                    Designed for landing pages{' '}
+                    <span role="img" alt="" aria-label="">
+                      🖥
+                    </span>, ads{' '}
+                    <span role="img" alt="" aria-label="">
+                      💰
+                    </span>, websites{' '}
+                    <span role="img" alt="" aria-label="">
+                      💻
+                    </span>, emails{' '}
+                    <span role="img" alt="" aria-label="">
+                      💌,{' '}
+                    </span>{' '}
+                    text messages{' '}
+                    <span role="img" alt="" aria-label="">
+                      📱
+                    </span>, and phone calls{' '}
+                    <span role="img" alt="" aria-label="">
+                      ☎️
+                    </span>
                   </strong>
                 </p>
               </div>
@@ -83,6 +98,7 @@ class Landing extends Component {
                 <img
                   src={window.location.origin + '/img/bulletin_board.png'}
                   className="mx-auto d-block home-img"
+                  alt=""
                 />
                 <h2 className="text-center">Click.</h2>
                 <p className="lead pt-2">
@@ -94,6 +110,7 @@ class Landing extends Component {
                 <img
                   src={window.location.origin + '/img/pencil_tip.png'}
                   className="mx-auto d-block home-img-2"
+                  alt=""
                 />
                 <h2 className="text-center">Customize.</h2>
                 <p className="lead pt-2">
@@ -105,6 +122,7 @@ class Landing extends Component {
                 <img
                   src={window.location.origin + '/img/lightbulb_idea.png'}
                   className="mx-auto d-block home-img-2"
+                  alt=""
                 />
                 <h2 className="text-center">Copy.</h2>
                 <p className="lead pt-2">
@@ -126,9 +144,6 @@ class Landing extends Component {
                 <Link to="/register" className="btn btn-lg mr-2 btn-3-signup">
                   Sign Up
                 </Link>
-                {/* <Link to="/login" className="btn btn-lg btn-light btn-2-login">
-                  Login
-                </Link> */}
               </div>
             </div>
           </div>

@@ -6,6 +6,7 @@ module.exports = function validateProfileData(data) {
 
   // set to empty string if empty, since validator isempty only checks strings
   data.handle = !isEmpty(data.handle) ? data.handle : '';
+
   data.status = !isEmpty(data.status) ? data.status : '';
   data.skills = !isEmpty(data.skills) ? data.skills : '';
   data.bio = !isEmpty(data.bio) ? data.bio : '';

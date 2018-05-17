@@ -58,19 +58,21 @@ class DashboardNavbar extends Component {
     );
 
     return (
-      <div class="nav-scroller bg-white box-shadow">
-        <nav class="nav nav-underline">
-          <a class="nav-link active" href="#">
+      <div className="nav-scroller bg-white box-shadow">
+        <nav className="nav nav-underline">
+          <a className="nav-link active" href="#">
             Featured
           </a>
-          <a class="nav-link" href="#">
+          <a className="nav-link" href="#">
             Community
-            <span class="badge badge-pill bg-light align-text-bottom">27</span>
+            <span className="badge badge-pill bg-light align-text-bottom">
+              27
+            </span>
           </a>
-          <a class="nav-link" href="#">
+          <a className="nav-link" href="#">
             Liked
           </a>
-          <a class="nav-link" href="#">
+          <a className="nav-link" href="#">
             Feedback
           </a>
         </nav>

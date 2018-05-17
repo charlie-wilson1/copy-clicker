@@ -15,6 +15,46 @@ class Navbar extends Component {
   render() {
     const { isAuthenticated, user } = this.props.auth;
 
+    const leftAuthLinks = (
+      <ul className="navbar-nav mr-auto">
+        <li className="nav-item">
+          <Link className="nav-link btn-signup" to="/dashboard">
+            {' '}
+            Home
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link btn-login" to="/profile">
+            {' '}
+            Saved
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link btn-login" to="/profile">
+            {' '}
+            Account
+          </Link>
+        </li>
+      </ul>
+    );
+
+    const leftGuestLinks = (
+      <ul className="navbar-nav mr-auto">
+        <li className="nav-item">
+          <Link className="nav-link btn-signup" to="/profile">
+            {' '}
+            Try It
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link btn-login" to="/profile">
+            {' '}
+            FAQ
+          </Link>
+        </li>
+      </ul>
+    );
+
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
@@ -75,26 +115,7 @@ class Navbar extends Component {
           </button>
 
           <div className="collapse navbar-collapse" id="mobile-nav">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link className="nav-link btn-signup" to="/profile">
-                  {' '}
-                  Try It
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link btn-login" to="/profile">
-                  {' '}
-                  FAQ
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link btn-login" to="/profile">
-                  {' '}
-                  Devs
-                </Link>
-              </li>
-            </ul>
+            {isAuthenticated ? leftAuthLinks : leftGuestLinks}
 
             {isAuthenticated ? authLinks : guestLinks}
           </div>

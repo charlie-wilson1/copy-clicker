@@ -4,6 +4,7 @@ import Typist from 'react-typist';
 import TypistLoop from 'react-typist-loop';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
+import ProperEmoji from '../common/ProperEmoji';
 
 class Landing extends Component {
   componentDidMount() {
@@ -65,26 +66,12 @@ class Landing extends Component {
               <div className="col-md-12">
                 <p className="lead text-center">
                   <strong>
-                    Designed for landing pages{' '}
-                    <span role="img" alt="" aria-label="">
-                      🖥
-                    </span>, ads{' '}
-                    <span role="img" alt="" aria-label="">
-                      💰
-                    </span>, websites{' '}
-                    <span role="img" alt="" aria-label="">
-                      💻
-                    </span>, emails{' '}
-                    <span role="img" alt="" aria-label="">
-                      💌,{' '}
-                    </span>{' '}
-                    text messages{' '}
-                    <span role="img" alt="" aria-label="">
-                      📱
-                    </span>, and phone calls{' '}
-                    <span role="img" alt="" aria-label="">
-                      ☎️
-                    </span>
+                    Designed for landing pages <ProperEmoji emoji="🖥" alt="" />,
+                    ads <ProperEmoji emoji="💰" alt="" />, websites
+                    <ProperEmoji emoji="💻" alt="" />, emails
+                    <ProperEmoji emoji="💌" alt="" />, text messages
+                    <ProperEmoji emoji="📱" alt="" />, and phone calls{' '}
+                    <ProperEmoji emoji="☎️" alt="" />
                   </strong>
                 </p>
               </div>

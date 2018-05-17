@@ -82,7 +82,7 @@ class Dashboard extends Component {
                 {dashboardContent}
               </div>
             </div>
-            <div class="row">
+            <div className="row">
               <div className="col-md-12">
                 <div className="my-3 p-3 bg-white rounded box-shadow">
                   <h6 className="border-bottom border-gray pb-2 mb-0">

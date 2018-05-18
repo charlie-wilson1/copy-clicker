@@ -20,6 +20,10 @@ import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/create-profile/CreateProfile';
 import EditProfile from './components/edit-profile/EditProfile';
 import AddExperience from './components/add-credentials/AddExperience';
+import AddCopy from './components/copy/AddCopy';
+
+import Community from './components/community/Community';
+import Home from './components/home/Home';
 
 import Privacy from './components/corporate/Privacy';
 
@@ -61,6 +65,14 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
 
+            <Switch>
+              <PrivateRoute exact path="/community" component={Community} />
+            </Switch>
+
+            <Switch>
+              <PrivateRoute exact path="/home" component={Home} />
+            </Switch>
+
             <div className="container">
               <Route exact path="/terms" component={Terms} />
               <Route exact path="/privacy" component={Privacy} />
@@ -87,6 +99,9 @@ class App extends Component {
                   path="/add-experience"
                   component={AddExperience}
                 />
+              </Switch>
+              <Switch>
+                <PrivateRoute exact path="/add-copy" component={AddCopy} />
               </Switch>
             </div>
             <Footer />

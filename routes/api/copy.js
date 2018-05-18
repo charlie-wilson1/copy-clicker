@@ -20,28 +20,36 @@ router.get('/test', (req, res) => res.json({ msg: 'copy works!' }));
 // @desc    Get copy
 // @access  Private
 // TODO: protect this route
-router.get('/', (req, res) => {
-  Copy.find()
-    .sort({ date: -1 })
-    .then(copy => {
-      if (copy.length === 0) {
-        res.json({ nocopyfound: 'No copy found' });
-      } else {
-        res.json(copy);
-      }
-    })
-    .catch(err => res.status(400).json({ nocopyfound: 'No copy found' }));
-});
+router.get(
+  '/',
+  passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    Copy.find()
+      .sort({ date: -1 })
+      .then(copy => {
+        if (copy.length === 0) {
+          res.json({ nocopyfound: 'No copy found' });
+        } else {
+          res.json(copy);
+        }
+      })
+      .catch(err => res.status(400).json({ nocopyfound: 'No copy found' }));
+  }
+);
 
 // @route   GET api/copy/:id
 // @desc    Get copy by id
 // @access  Private
 // TODO: protect this route
-router.get('/:id', (req, res) => {
-  Copy.findById(req.params.id)
-    .then(copy => res.json(copy))
-    .catch(err => res.status(400).json({ nocopyfound: 'No copy found' }));
-});
+router.get(
+  '/:id',
+  passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    Copy.findById(req.params.id)
+      .then(copy => res.json(copy))
+      .catch(err => res.status(400).json({ nocopyfound: 'No copy found' }));
+  }
+);
 
 // @route   POST api/copy
 // @desc    Post a copy route

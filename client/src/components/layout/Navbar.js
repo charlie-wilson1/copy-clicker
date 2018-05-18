@@ -24,17 +24,23 @@ class Navbar extends Component {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link btn-login" to="/profile">
+          <Link className="nav-link btn-login" to="/community">
             {' '}
-            Saved
+            Community
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link btn-login" to="/profile">
             {' '}
-            Account
+            My Copy
           </Link>
         </li>
+        {/* <li className="nav-item">
+          <Link className="nav-link btn-login" to="/profile">
+            {' '}
+            Account
+          </Link>
+        </li> */}
       </ul>
     );
 
@@ -57,11 +63,10 @@ class Navbar extends Component {
 
     const authLinks = (
       <ul className="navbar-nav ml-auto">
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <img
             src={user.avatar}
             alt={user.name}
-            // className="nav-link rounded-circle"
             style={{
               width: '25px',
               marginRight: '15px',
@@ -69,11 +74,20 @@ class Navbar extends Component {
             }}
             title="You must have a gravatar connected to your email to display an image"
           />
-        </li>
-        <li className="nav-item">
+        </li> */}
+        {/* <li className="nav-item">
           <a
             href=""
             className="nav-link btn-signup"
+            onClick={this.onLogoutClick.bind(this)}
+          >
+            Profile
+          </a>
+        </li> */}
+        <li className="nav-item">
+          <a
+            href=""
+            className="nav-link btn-login"
             onClick={this.onLogoutClick.bind(this)}
           >
             Logout

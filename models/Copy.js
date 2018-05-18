@@ -3,13 +3,16 @@ const Schema = mongoose.Schema;
 
 //Create schema
 const CopySchema = new Schema({
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'users'
+  },
   category: {
     type: String,
     required: true
   },
   subject: {
-    type: String,
-    required: true
+    type: String
   },
   body: {
     type: String,
@@ -23,6 +26,25 @@ const CopySchema = new Schema({
     type: String
   },
   sequence_position: {
+    type: Number
+  },
+  likes: [
+    {
+      user: {
+        type: Schema.Types.ObjectId,
+        ref: 'users'
+      }
+    }
+  ],
+  date: {
+    type: Date,
+    default: Date.now
+  },
+  featured: {
+    type: Boolean,
+    required: false
+  },
+  featured_order: {
     type: Number
   }
 });

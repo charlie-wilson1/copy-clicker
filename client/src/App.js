@@ -22,6 +22,8 @@ import EditProfile from './components/edit-profile/EditProfile';
 import AddExperience from './components/add-credentials/AddExperience';
 import AddEducation from './components/add-credentials/AddEducation';
 
+import Profiles from './components/profiles/Profiles';
+
 import AddCopy from './components/copy/AddCopy';
 
 import Community from './components/community/Community';
@@ -66,6 +68,7 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/profiles" component={Profiles} />
 
             <Switch>
               <PrivateRoute exact path="/community" component={Community} />
@@ -102,6 +105,7 @@ class App extends Component {
                   component={AddExperience}
                 />
               </Switch>
+
               <Switch>
                 <PrivateRoute
                   exact

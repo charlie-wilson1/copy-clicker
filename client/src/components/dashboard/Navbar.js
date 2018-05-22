@@ -51,7 +51,7 @@ class DashboardNavbar extends Component {
                   {/* <a className="nav-link" href="#">
                   Link
                 </a> */}
-                  <select class="custom-select">
+                  <select className="custom-select">
                     <option selected>Fresh</option>
                     <option value="1">Most Liked</option>
                     {/* <option value="2">Two</option>
@@ -63,7 +63,7 @@ class DashboardNavbar extends Component {
                   {/* <a className="nav-link" href="#">
                   Link
                 </a> */}
-                  <select class="custom-select">
+                  <select className="custom-select">
                     <option selected>All Types</option>
                     <option value="1">Emails</option>
                     <option value="1">SMS</option>
@@ -78,7 +78,7 @@ class DashboardNavbar extends Component {
                   {/* <a className="nav-link" href="#">
                   Link
                 </a> */}
-                  <select class="custom-select">
+                  <select className="custom-select">
                     <option selected>Industry</option>
                     <option value="1">Digital Marketing</option>
                     <option value="1">SMS</option>

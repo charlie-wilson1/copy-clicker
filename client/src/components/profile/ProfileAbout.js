@@ -18,7 +18,7 @@ class ProfileAbout extends Component {
 
     return (
       <div>
-        <div class="row">
+        <div className="row">
           <div className="col-md-12">
             <div className="card card-body bg-light mb-3">
               <h3 className="text-center text-info">{firstName}'s Bio</h3>

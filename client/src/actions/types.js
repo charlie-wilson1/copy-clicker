@@ -9,7 +9,7 @@ export const CLEAR_CURRENT_PROFILE = 'CLEAR_CURRENT_PROFILE';
 export const GET_PROFILES = 'GET_PROFILES';
 
 // post types
-export const POSTS_LOADING = 'POSTS_LOADING';
+export const POST_LOADING = 'POSTS_LOADING';
 export const GET_POSTS = 'GET_POSTS';
 export const GET_POST = 'GET_POST';
 export const ADD_POST = 'ADD_POST';

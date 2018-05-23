@@ -24,6 +24,12 @@ class Navbar extends Component {
           </Link>
         </li>
         <li className="nav-item">
+          <Link className="nav-link btn-login" to="/feed">
+            {' '}
+            Post Feed
+          </Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link btn-login" to="/community">
             {' '}
             Community

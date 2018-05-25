@@ -25,6 +25,7 @@ import Profile from './components/profile/Profile';
 import NotFound from './components/not-found/NotFound';
 
 import Posts from './components/posts/Posts';
+import Post from './components/post/Post';
 
 import Profiles from './components/profiles/Profiles';
 
@@ -112,6 +113,10 @@ class App extends Component {
                   path="/add-experience"
                   component={AddExperience}
                 />
+              </Switch>
+
+              <Switch>
+                <PrivateRoute exact path="/post/:id" component={Post} />
               </Switch>
 
               <Switch>

@@ -20,15 +20,13 @@ class Post extends Component {
     } else {
       postContent = (
         <div>
-          <PostItem post={post} />
+          <PostItem post={post} showActions={false} />
         </div>
       );
     }
 
     return (
       <div className="post">
-        {/* <h1>{post.text}</h1> */}
-
         <div className="container">
           <div className="row">
             <div className="col-md-12">

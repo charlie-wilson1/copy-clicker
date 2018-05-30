@@ -2,10 +2,10 @@ import React from 'react';
 
 export default () => {
   return (
-    <div>
+    <div className="container my-4">
       {/* <div class="content-wrapper"> */}
 
-      <h2>Terms and Conditions</h2>
+      <h2 class="display-4">Terms and Conditions</h2>
       <p>
         This web page represents our Terms of Use, Terms and Conditions and Sale
         ("Agreement") regarding our website, https://onlinesalespro.com/

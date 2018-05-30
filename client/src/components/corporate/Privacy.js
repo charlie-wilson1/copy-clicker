@@ -2,8 +2,8 @@ import React from 'react';
 
 export default () => {
   return (
-    <div>
-      <h2>Privacy Policy</h2>
+    <div class="container my-4">
+      <h2 className="display-4"> Privacy Policy</h2>
       <p>Last updated: May 01, 2018</p>
       <p>
         Online Sales Pro, by LeadLine, LLC ("us", "we", or "our") operates the{' '}

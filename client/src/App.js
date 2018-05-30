@@ -9,12 +9,19 @@ import { setCurrentUser } from './actions/authActions';
 
 import PrivateRoute from './components/common/PrivateRoute';
 
+//layout
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+
+// coropate pages
 import Landing from './components/layout/Landing';
-import Register from './components/auth/Register';
-import Login from './components/auth/Login';
 import Terms from './components/corporate/Terms';
+import TryIt from './components/corporate/TryIt';
+import Faq from './components/corporate/Faq';
+
+// auth pages
+import Signup from './components/auth/Register';
+import Login from './components/auth/Login';
 
 import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/create-profile/CreateProfile';
@@ -70,16 +77,23 @@ class App extends Component {
           <div className="App bg-light">
             <Navbar />
             <Switch>
+              {/* corporate */}
               <Route exact path="/" component={Landing} />
-              <Route exact path="/register" component={Register} />
+              <Route exact path="/terms" component={Terms} />
+              <Route exact path="/privacy" component={Privacy} />
+              <Route exact path="/try-it" component={TryIt} />
+              <Route exact path="/faq" component={Faq} />
+
+              {/* auth */}
+              <Route exact path="/signup" component={Signup} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/profiles" component={Profiles} />
               <Route exact path="/profile/:handle" component={Profile} />
-              <PrivateRoute exact path="/community" component={Community} />
-              <PrivateRoute exact path="/home" component={Home} />
 
-              <Route exact path="/terms" component={Terms} />
-              <Route exact path="/privacy" component={Privacy} />
+              {/* private */}
+
+              {/* <PrivateRoute exact path="/community" component={Community} /> */}
+              <PrivateRoute exact path="/home" component={Home} />
 
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute
@@ -92,7 +106,7 @@ class App extends Component {
                 path="/edit-profile"
                 component={EditProfile}
               />
-              <PrivateRoute exact path="/feed" component={Posts} />
+              <PrivateRoute exact path="/community" component={Posts} />
               <PrivateRoute
                 exact
                 path="/add-experience"

@@ -21,7 +21,7 @@ export default () => {
                 </Link>
               </li>
               <li>
-                <Link className="text-muted" to="/privacy">
+                <Link className="text-muted" to="/terms">
                   Terms & Condition
                 </Link>
               </li>
@@ -47,7 +47,7 @@ export default () => {
               </li>
             </ul>
           </div>
-          <div className="col-6 col-md">
+          {/* <div className="col-6 col-md">
             <h5>Resources</h5>
             <ul className="list-unstyled text-small">
               <li>
@@ -66,23 +66,23 @@ export default () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className="col-6 col-md">
-            <h5>About</h5>
+            <h5>Social</h5>
             <ul className="list-unstyled text-small">
               <li>
                 <Link className="text-muted" to="/login">
-                  Login
+                  About
                 </Link>
               </li>
               <li>
                 <Link className="text-muted" to="/signup">
-                  Signup
+                  Facebook
                 </Link>
               </li>
               <li>
                 <Link className="text-muted" to="/">
-                  Home
+                  Blog
                 </Link>
               </li>
             </ul>

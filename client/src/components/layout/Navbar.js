@@ -24,17 +24,17 @@ class Navbar extends Component {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link btn-login" to="/feed">
-            {' '}
-            Post Feed
-          </Link>
-        </li>
-        <li className="nav-item">
           <Link className="nav-link btn-login" to="/community">
             {' '}
             Community
           </Link>
         </li>
+        {/* <li className="nav-item">
+          <Link className="nav-link btn-login" to="/community">
+            {' '}
+            Community
+          </Link>
+        </li> */}
         <li className="nav-item">
           <Link className="nav-link btn-login" to="/profile">
             {' '}
@@ -53,13 +53,13 @@ class Navbar extends Component {
     const leftGuestLinks = (
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">
-          <Link className="nav-link btn-signup" to="/profile">
+          <Link className="nav-link btn-signup" to="/try-it">
             {' '}
             Try It
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link btn-login" to="/profile">
+          <Link className="nav-link btn-login" to="/faq">
             {' '}
             FAQ
           </Link>
@@ -90,13 +90,21 @@ class Navbar extends Component {
             Profile
           </a>
         </li> */}
+
+        <li className="nav-item">
+          <Link className="nav-link btn-login" to="/profile">
+            {' '}
+            {user.name}
+          </Link>
+        </li>
+
         <li className="nav-item">
           <a
             href=""
             className="nav-link btn-login"
             onClick={this.onLogoutClick.bind(this)}
           >
-            Logout {user.name}
+            Logout
           </a>
         </li>
       </ul>
@@ -105,7 +113,7 @@ class Navbar extends Component {
     const guestLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link btn-signup" to="/register">
+          <Link className="nav-link btn-signup" to="/signup">
             Sign Up
           </Link>
         </li>

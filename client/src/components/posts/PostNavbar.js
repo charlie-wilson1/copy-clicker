@@ -101,8 +101,8 @@ class PostNavbar extends Component {
                   aria-label="Search"
                 />
               </form>
-              <Link to="add-copy" className="btn btn-info mr-1">
-                Add New
+              <Link to="add-post" className="btn btn-info mr-1">
+                Add Copy
               </Link>
             </div>
           </nav>

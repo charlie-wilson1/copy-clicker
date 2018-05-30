@@ -30,6 +30,13 @@ class PostItem extends Component {
     // const post = this.props.post.post;
     // console.log(post);
 
+    let icon;
+    if (post.type === 'sms') {
+      icon = 'fa-envelope';
+    }
+
+    // icon = {post.type === 'sms' ? 'fa-envelope' : null };
+
     return (
       <div className="card card-body mb-3">
         <div className="row">
@@ -47,7 +54,7 @@ class PostItem extends Component {
           {/* </div> */}
           <div className="col-md-10">
             <p className="lead">
-              <i class="fas fa-envelope text-info mx-2" />
+              <i className={classnames('fas mx-2', icon)} />
               {post.text}
             </p>
             <p>by {post.name}</p>

@@ -387,6 +387,7 @@ export default () => {
         <a
           href="http://www.google.com/intl/en/policies/privacy/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           http://www.google.com/intl/en/policies/privacy/
         </a>
@@ -398,14 +399,22 @@ export default () => {
       <p>
         You can learn more about interest-based advertising from Facebook by
         visiting this page:
-        <a href="https://www.facebook.com/help/164968693837950" target="_blank">
+        <a
+          href="https://www.facebook.com/help/164968693837950"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           https://www.facebook.com/help/164968693837950
         </a>
       </p>
       <p>
         To opt-out from Facebook's interest-based ads follow these instructions
         from Facebook:
-        <a href="https://www.facebook.com/help/568137493302217" target="_blank">
+        <a
+          href="https://www.facebook.com/help/568137493302217"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           https://www.facebook.com/help/568137493302217
         </a>
       </p>
@@ -438,14 +447,22 @@ export default () => {
       <p>-Chargeover</p>
       <p>
         Their Privacy Policy can be viewed at
-        <a href="https://chargeover.com/privacy-policy" target="_blank">
+        <a
+          href="https://chargeover.com/privacy-policy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           https://chargeover.com/privacy-policy
         </a>
       </p>
       <p>-Stripe</p>
       <p>
         Their Privacy Policy can be viewed at
-        <a href="https://stripe.com/us/privacy" target="_blank">
+        <a
+          href="https://stripe.com/us/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           https://stripe.com/us/privacy
         </a>{' '}
       </p>
@@ -455,6 +472,7 @@ export default () => {
         <a
           href="https://www.paypal.com/webapps/mpp/ua/privacy-full"
           target="_blank"
+          rel="noopener noreferrer"
         >
           https://www.paypal.com/webapps/mpp/ua/privacy-full
         </a>
@@ -462,7 +480,11 @@ export default () => {
       <p>-Authorize.net</p>
       <p>
         Their Privacy Policy can be viewed at
-        <a href="https://www.authorize.net/company/privacy/" target="_blank">
+        <a
+          href="https://www.authorize.net/company/privacy/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           https://www.authorize.net/company/privacy/
         </a>
       </p>

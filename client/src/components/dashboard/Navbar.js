@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
@@ -13,7 +13,7 @@ class DashboardNavbar extends Component {
   }
 
   render() {
-    const { isAuthenticated, user } = this.props.auth;
+    // const {isAuthenticated, user } = this.props.auth;
 
     return (
       <div style={{ backgroundColor: 'white' }}>
@@ -88,40 +88,6 @@ class DashboardNavbar extends Component {
                     <option value="3">Three</option> */}
                   </select>
                 </li>
-
-                {/* <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <div
-                    className="dropdown-menu"
-                    aria-labelledby="navbarDropdown"
-                  >
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                    <div className="dropdown-divider" />
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </div>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link disabled" href="#">
-                    Disabled
-                  </a>
-                </li> */}
               </ul>
               <form className="form-inline my-2 my-lg-0">
                 <input
@@ -130,78 +96,11 @@ class DashboardNavbar extends Component {
                   placeholder="Search"
                   aria-label="Search"
                 />
-                {/* <button
-                  className="btn btn-outline-success my-2 my-sm-0"
-                  type="submit"
-                >
-                  Search
-                </button> */}
               </form>
             </div>
           </nav>
         </div>
       </div>
-
-      //  <select class="custom-select">
-      //   <option selected>Open this select menu</option>
-      //   <option value="1">One</option>
-      //   <option value="2">Two</option>
-      //   <option value="3">Three</option>
-      // </select>
-
-      // <div className="nav-scroller bg-white box-shadow">
-      //   <div className="container">
-      //     <ul className="nav nav-underline">
-      //       <li className="nav-item dropdown">
-      //         <a
-      //           className="nav-link dropdown-toggle"
-      //           data-toggle="dropdown"
-      //           href="#"
-      //           role="button"
-      //           aria-haspopup="true"
-      //           aria-expanded="false"
-      //         >
-      //           Dropdown
-      //         </a>
-      //         <div className="dropdown-menu">
-      //           <a className="dropdown-item" href="#">
-      //             Action
-      //           </a>
-      //           <a className="dropdown-item" href="#">
-      //             Another action
-      //           </a>
-      //           <a className="dropdown-item" href="#">
-      //             Something else here
-      //           </a>
-      //           <div className="dropdown-divider" />
-      //           <a className="dropdown-item" href="#">
-      //             Separated link
-      //           </a>
-      //         </div>
-      //       </li>
-      //       <a className="nav-link active" href="#">
-      //         Featured
-      //       </a>
-      //       <a className="nav-link" href="#">
-      //         Community
-      //         <span className="badge badge-pill bg-light align-text-bottom">
-      //           27
-      //         </span>
-      //       </a>
-      //       <a className="nav-link" href="#">
-      //         Liked
-      //       </a>
-      //       <a className="nav-link" href="#">
-      //         Feedback22
-      //       </a>
-      //       <select class="selectpicker">
-      //         <option>Mustard</option>
-      //         <option>Ketchup</option>
-      //         <option>Relish</option>
-      //       </select>
-      //     </ul>
-      //   </div>
-      // </div>
     );
   }
 }

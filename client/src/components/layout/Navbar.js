@@ -96,7 +96,7 @@ class Navbar extends Component {
             className="nav-link btn-login"
             onClick={this.onLogoutClick.bind(this)}
           >
-            Logout
+            Logout {user.name}
           </a>
         </li>
       </ul>

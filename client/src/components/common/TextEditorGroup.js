@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
-import PropTypes from 'prop-types';
+// import classnames from 'classnames';
+// import PropTypes from 'prop-types';
 import { Editor } from '@tinymce/tinymce-react';
 
 class TextEditorGroup extends Component {

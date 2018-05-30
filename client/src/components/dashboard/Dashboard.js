@@ -126,7 +126,7 @@ class Dashboard extends Component {
                     </p>
                   </div>
                   <small className="d-block text-right mt-3">
-                    <a href="#">All updates</a>
+                    {/* <a href="#">All updates</a> */}
                   </small>
                 </div>
               </div>

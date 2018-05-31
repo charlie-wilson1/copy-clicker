@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const path = require('path');
+var sslRedirect = require('heroku-ssl-redirect');
 
 const users = require('./routes/api/users');
 const profile = require('./routes/api/profile');
@@ -31,6 +32,9 @@ app.use(passport.initialize());
 
 // Passport config
 require('./config/passport')(passport);
+
+// enable ssl redirect
+app.use(sslRedirect());
 
 // Use routes
 app.use('/api/users', users);

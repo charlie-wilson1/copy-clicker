@@ -4,6 +4,10 @@ import { getPosts, getEmailPosts } from '../../actions/postActions';
 import { connect } from 'react-redux';
 
 class PostNavbar extends Component {
+  componentDidMount() {
+    this.props.getPosts();
+  }
+
   onChange() {}
 
   render() {

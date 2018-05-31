@@ -73,7 +73,7 @@ class Posts extends Component {
 
     return (
       <div className="feed">
-        {/* <PostNavbar /> */}
+        <PostNavbar />
         <SelectListGroup
           placeholder="type"
           name="type"

@@ -35,6 +35,7 @@ import NotFound from './components/not-found/NotFound';
 
 import Posts from './components/posts/Posts';
 import PostsFeatured from './components/posts/PostsFeatured';
+import PostsMy from './components/posts/PostsMy';
 
 import Post from './components/post/Post';
 
@@ -119,6 +120,8 @@ class App extends Component {
               />
               <PrivateRoute exact path="/add-post" component={PostAdd} />
               <PrivateRoute exact path="/community" component={Posts} />
+              <PrivateRoute exact path="/my-copy" component={PostsMy} />
+
               <PrivateRoute exact path="/home" component={PostsFeatured} />
 
               <PrivateRoute

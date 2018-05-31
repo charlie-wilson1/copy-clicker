@@ -72,6 +72,7 @@ Profile.propTypes = {
 
 const mapStateToProps = state => ({
   profile: state.profile
+  // auth: state.auth
 });
 
 export default connect(mapStateToProps, { getProfileByHandle })(Profile);

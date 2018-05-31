@@ -36,7 +36,7 @@ class Navbar extends Component {
           </Link>
         </li> */}
         <li className="nav-item">
-          <Link className="nav-link btn-login" to="/profile">
+          <Link className="nav-link btn-login" to="/my-copy">
             {' '}
             My Copy
           </Link>

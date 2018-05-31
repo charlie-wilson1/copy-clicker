@@ -213,3 +213,8 @@ h2 {
 .lh-150 {
   line-height: 1.5;
 }
+
+.bg-featured-email {
+  background-color: limegreen;
+  background: url('https://images.pexels.com/photos/4970/fashion-person-woman-hand.jpg?auto=compress&cs=tinysrgb&h=650&w=940');
+}

@@ -41,12 +41,27 @@ class PostItem extends Component {
 
     return (
       <div className="col-md-6">
-        <div className="card card-body mb-3">
+        <div className="card card-body mb-3 bg-featured-email text-light">
           <div className="row">
             <div className="col-md-12">
               <p className="lead">
-                <i className={classnames('fas mx-2', icon)} />
+                <i
+                  className={classnames('fas mx-2', icon)}
+                  style={{ fontSize: '40px' }}
+                />
+                FEATURED CONTENT
+              </p>
+              <p className="lead">
+                {/* <i
+                  className={classnames('fas mx-2', icon)}
+                  style={{ fontSize: '40px' }}
+                /> */}
                 {post.text || post.subject}
+              </p>
+              <hr />
+              <p className="lead">
+                {/* <i className={classnames('fas mx-2', icon)} /> */}
+                {post.body}
               </p>
               <p>by {post.name}</p>
               {showActions ? (

@@ -34,6 +34,8 @@ import PostAdd from './components/post-add/PostAdd';
 import NotFound from './components/not-found/NotFound';
 
 import Posts from './components/posts/Posts';
+import PostsFeatured from './components/posts/PostsFeatured';
+
 import Post from './components/post/Post';
 
 import Profiles from './components/profiles/Profiles';
@@ -102,7 +104,7 @@ class App extends Component {
               {/* private */}
 
               {/* <PrivateRoute exact path="/community" component={Community} /> */}
-              <PrivateRoute exact path="/home" component={Home} />
+              <PrivateRoute exact path="/home2" component={Home} />
 
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute
@@ -117,6 +119,8 @@ class App extends Component {
               />
               <PrivateRoute exact path="/add-post" component={PostAdd} />
               <PrivateRoute exact path="/community" component={Posts} />
+              <PrivateRoute exact path="/home" component={PostsFeatured} />
+
               <PrivateRoute
                 exact
                 path="/add-experience"

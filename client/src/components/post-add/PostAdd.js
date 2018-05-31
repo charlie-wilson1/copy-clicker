@@ -65,7 +65,9 @@ class PostAdd extends Component {
 
     let contentArea = <FormEmail />;
 
-    if (this.state.type === 'email') {
+    if (this.state.type === '') {
+      contentArea = <h3 className="text-center m-5">Choose a type above 😀</h3>;
+    } else if (this.state.type === 'email') {
       contentArea = <FormEmail />;
     } else {
       contentArea = <FormSMS />;
@@ -73,7 +75,7 @@ class PostAdd extends Component {
     // select options for status
     const typeOptions = [
       {
-        label: 'Choose',
+        label: 'Choose a Type',
         value: ''
       },
       {
@@ -89,8 +91,8 @@ class PostAdd extends Component {
         value: 'website'
       },
       {
-        label: 'Other',
-        value: 'Other'
+        label: 'Tips & Questions',
+        value: 'other'
       }
     ];
 

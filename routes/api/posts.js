@@ -21,7 +21,16 @@ router.get('/', (req, res) => {
   //     .then(posts => res.json(posts))
   //     .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));
   // } else {
-  Post.find({ type: req.query['type'] })
+
+  // let params;
+
+  // if (req.query['type']) {
+  //   params = {
+  //     type: req.query['type']
+  //   };
+  // }
+
+  Post.find()
     .sort({ date: -1 })
     .then(posts => res.json(posts))
     .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));
@@ -44,7 +53,25 @@ router.get('/search', (req, res) => {
   //   query.action = obj.action;
   // }
 
-  Post.find({ type: req.query['type'] })
+  let params = {};
+
+  if (req.query['type']) {
+    // params = {
+    //   type: req.query['type']
+    // };
+
+    params.type = req.query['type'];
+  }
+
+  if (req.query['user']) {
+    // params = {
+    //   type: req.query['type']
+    // };
+
+    params.user = req.query['user'];
+  }
+
+  Post.find(params)
     .sort({ date: -1 })
     .then(posts => res.json(posts))
     .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));

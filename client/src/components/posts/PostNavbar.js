@@ -35,24 +35,24 @@ class PostNavbar extends Component {
   render() {
     const typeOptions = [
       {
-        label: 'Choose',
+        label: '🎉 All Types',
         value: ''
       },
       {
-        label: 'Email',
+        label: '✉️ Email',
         value: 'email'
       },
       {
-        label: 'SMS',
+        label: '📱 SMS',
         value: 'sms'
       },
       {
-        label: 'Landing Page',
+        label: '🖥 Landing Page',
         value: 'website'
       },
       {
-        label: 'Other',
-        value: 'Other'
+        label: '⁉️ Questions & Tips',
+        value: 'other'
       }
     ];
 
@@ -84,19 +84,6 @@ class PostNavbar extends Component {
             >
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item mr-2">
-                  {/* <a className="nav-link" href="#">
-                    Link
-                  </a> */}
-                  {/* <select className="custom-select">
-                    <option selected>All Types</option>
-                    <option value="1">Emails</option>
-                    <option value="1">SMS</option>
-                    <option value="1">Landing Pages</option> */}
-
-                  {/* <option value="2">Two</option>
-                      <option value="3">Three</option> */}
-                  {/* </select> */}
-
                   <SelectListGroup
                     placeholder="type"
                     name="type"
@@ -104,7 +91,7 @@ class PostNavbar extends Component {
                     onChange={this.onChange}
                     options={typeOptions}
                     // error={errors.status}
-                    info="Give us an idea of where you are in your career :)"
+                    // info="Give us an idea of where you are in your career :)"
                   />
                 </li>
               </ul>

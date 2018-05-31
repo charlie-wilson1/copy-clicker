@@ -13,7 +13,7 @@ import {
 export const addPost = postData => dispatch => {
   dispatch(clearErrors());
 
-  console.log('POST DATA ' + JSON.stringify(postData));
+  // console.log('POST DATA ' + JSON.stringify(postData));
 
   axios
     .post('/api/posts', postData)

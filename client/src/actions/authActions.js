@@ -1,6 +1,7 @@
 import axios from 'axios';
 import setAuthToken from '../utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
+import { toast } from 'react-toastify';
 
 import { GET_ERRORS, SET_CURRENT_USER } from './types';
 
@@ -8,7 +9,12 @@ import { GET_ERRORS, SET_CURRENT_USER } from './types';
 export const registerUser = (userData, history) => dispatch => {
   axios
     .post('api/users/register', userData)
-    .then(res => history.push('/login'))
+    .then(res => {
+      // toast
+      toast('Welome! You can now login.');
+      // redirect
+      history.push('/login');
+    })
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
@@ -22,6 +28,8 @@ export const loginUser = (userData, history) => dispatch => {
   axios
     .post('api/users/login', userData)
     .then(res => {
+      //toast
+      toast('Welcome home big daddy 🍾');
       // Save to localStorage
       const { token } = res.data;
       //set token to ls

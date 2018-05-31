@@ -4,19 +4,19 @@ import PropTypes from 'prop-types';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import InputGroup from '../common/InputGroup';
 
+import { withRouter } from 'react-router-dom';
+
 import { addPost } from '../../actions/postActions';
 import SelectListGroup from '../common/SelectListGroup';
 
-import FormEmail from './FormEmail';
-import FormSMS from './FormSMS';
-
-class PostAdd extends Component {
+class FormEmail extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      type: '',
-      text: '',
+      //   type: '',
+      subject: '',
+      body: '',
       errors: {}
     };
 
@@ -36,63 +36,30 @@ class PostAdd extends Component {
     const { user } = this.props.auth;
 
     const newPost = {
-      text: this.state.text,
-      type: this.state.type,
+      subject: this.state.subject,
+      body: this.state.body,
+      type: 'email',
       name: user.name,
       avatar: user.avatar
     };
 
     this.props.addPost(newPost);
 
-    this.setState({ text: '' });
+    // this.setState({ text: '' });
 
     this.props.history.push('/community');
 
-    // console.log('submitted');
+    console.log('submitted');
   }
 
   onChange(e) {
     this.setState({
       [e.target.name]: e.target.value
     });
-
-    // alert(e.target.value);
-    this.state.type = e.target.value;
   }
 
   render() {
     const { errors } = this.state;
-
-    let contentArea = <FormEmail />;
-
-    if (this.state.type === 'email') {
-      contentArea = <FormEmail />;
-    } else {
-      contentArea = <FormSMS />;
-    }
-    // select options for status
-    const typeOptions = [
-      {
-        label: 'Choose',
-        value: ''
-      },
-      {
-        label: 'Email',
-        value: 'email'
-      },
-      {
-        label: 'SMS',
-        value: 'sms'
-      },
-      {
-        label: 'Landing Page',
-        value: 'website'
-      },
-      {
-        label: 'Other',
-        value: 'Other'
-      }
-    ];
 
     return (
       <div className="container">
@@ -104,34 +71,43 @@ class PostAdd extends Component {
                   Add some copy, totally rad
                 </div>
                 <div className="card-body">
-                  {/* <form onSubmit={this.onSubmit}> */}
-                  <SelectListGroup
-                    placeholder="type"
-                    name="type"
-                    value={this.state.type}
-                    onChange={this.onChange}
-                    options={typeOptions}
-                    error={errors.status}
-                    info="Give us an idea of where you are in your career :)"
-                  />
+                  <form onSubmit={this.onSubmit}>
+                    <h3>Subject</h3>
+                    <div className="form-group">
+                      <TextAreaFieldGroup
+                        placeholder="Subject"
+                        name="subject"
+                        value={this.state.subject}
+                        onChange={this.onChange}
+                        error={errors.subject}
+                      />
+                    </div>
 
-                  {/* <button type="submit" className="btn btn-dark">
+                    <h3>Body:</h3>
+                    <div className="form-group">
+                      <TextAreaFieldGroup
+                        placeholder="Body"
+                        name="body"
+                        value={this.state.body}
+                        onChange={this.onChange}
+                        error={errors.body}
+                      />
+                    </div>
+                    <button type="submit" className="btn btn-dark">
                       Submit
-                    </button> */}
-                  {/* </form> */}
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        {contentArea}
       </div>
     );
   }
 }
 
-PostAdd.propTypes = {
+FormEmail.propTypes = {
   addPost: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
@@ -142,4 +118,4 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { addPost })(PostAdd);
+export default connect(mapStateToProps, { addPost })(withRouter(FormEmail));

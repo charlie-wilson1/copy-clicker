@@ -50,6 +50,10 @@ import { logoutUser } from './actions/authActions';
 import './App.css';
 import { clearCurrentProfile } from './actions/profileActions';
 
+// TOOOOOOOOAST
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // check for token
 if (localStorage.jwtToken) {
   // set auth token header auth
@@ -73,10 +77,13 @@ if (localStorage.jwtToken) {
 
 class App extends Component {
   render() {
+    // toast('Wow so easy !');
+
     return (
       <Provider store={store}>
         <Router>
           <div className="App bg-light">
+            <ToastContainer />
             <Navbar />
             <Switch>
               {/* corporate */}

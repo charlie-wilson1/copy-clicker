@@ -48,6 +48,8 @@ router.post(
     const newPost = new Post({
       text: req.body.text,
       name: req.body.name,
+      subject: req.body.subject,
+      body: req.body.body,
       type: req.body.type,
       avatar: req.body.avatar,
       user: req.user.id

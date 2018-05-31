@@ -32,30 +32,20 @@ class PostItem extends Component {
 
     let icon;
     if (post.type === 'sms') {
+      icon = 'fa-comment';
+    } else if (post.type === 'email') {
       icon = 'fa-envelope';
+    } else if (post.type === 'website') {
+      icon = 'fa-desktop';
     }
-
-    // icon = {post.type === 'sms' ? 'fa-envelope' : null };
 
     return (
       <div className="card card-body mb-3">
         <div className="row">
-          {/* <div className="col-md-2"> */}
-
-          {/* <a href="profile.html">
-              <img
-                className="rounded-circle d-none d-md-block img-fluid"
-                src={post.avatar}
-                alt=""
-              />
-            </a> */}
-          {/* <br /> */}
-          {/* <p className="text-center">{post.name}</p> */}
-          {/* </div> */}
           <div className="col-md-10">
             <p className="lead">
               <i className={classnames('fas mx-2', icon)} />
-              {post.text}
+              {post.text || post.subject}
             </p>
             <p>by {post.name}</p>
             {showActions ? (

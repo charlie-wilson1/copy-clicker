@@ -2,15 +2,60 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { getPosts, getEmailPosts } from '../../actions/postActions';
 import { connect } from 'react-redux';
+// import SelectListGroup from '../common/SelectListGroup';
+// import SelectListGroup from '../common/SelectListGroup';
+import SelectListGroup from '../common/SelectListGroup';
 
 class PostNavbar extends Component {
-  componentDidMount() {
-    this.props.getPosts();
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      type: ''
+      // text: '',
+      // errors: {}
+    };
+
+    this.onChange = this.onChange.bind(this);
+    // this.onSubmit = this.onSubmit.bind(this);
   }
 
-  onChange() {}
+  componentDidMount() {
+    // this.props.getPosts();
+  }
+
+  onChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+
+    this.props.getPostsToDisplay(e.target.value);
+  }
 
   render() {
+    const typeOptions = [
+      {
+        label: 'Choose',
+        value: ''
+      },
+      {
+        label: 'Email',
+        value: 'email'
+      },
+      {
+        label: 'SMS',
+        value: 'sms'
+      },
+      {
+        label: 'Landing Page',
+        value: 'website'
+      },
+      {
+        label: 'Other',
+        value: 'Other'
+      }
+    ];
+
     return (
       <div style={{ backgroundColor: 'white' }}>
         <div className="container">
@@ -42,15 +87,25 @@ class PostNavbar extends Component {
                   {/* <a className="nav-link" href="#">
                     Link
                   </a> */}
-                  <select className="custom-select">
+                  {/* <select className="custom-select">
                     <option selected>All Types</option>
                     <option value="1">Emails</option>
                     <option value="1">SMS</option>
-                    <option value="1">Landing Pages</option>
+                    <option value="1">Landing Pages</option> */}
 
-                    {/* <option value="2">Two</option>
+                  {/* <option value="2">Two</option>
                       <option value="3">Three</option> */}
-                  </select>
+                  {/* </select> */}
+
+                  <SelectListGroup
+                    placeholder="type"
+                    name="type"
+                    value={this.state.type}
+                    onChange={this.onChange}
+                    options={typeOptions}
+                    // error={errors.status}
+                    info="Give us an idea of where you are in your career :)"
+                  />
                 </li>
               </ul>
 

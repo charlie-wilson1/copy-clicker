@@ -20,11 +20,14 @@ class Posts extends Component {
     };
 
     this.onChange = this.onChange.bind(this);
+    this.getPostsToDisplay = this.getPostsToDisplay.bind(this);
+
     // this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentDidMount() {
-    this.props.getPosts();
+    // this.props.getPosts();
+    this.getPostsToDisplay(null);
   }
 
   onChange(e) {
@@ -32,12 +35,19 @@ class Posts extends Component {
       [e.target.name]: e.target.value
     });
 
-    // alert(e.target.value);
+    this.getPostsToDisplay(e.target.value);
+  }
+
+  getPostsToDisplay(filter) {
+    let myParams = {};
+
+    if (filter) {
+      myParams['type'] = filter;
+    }
+
     // this.state.type = e.target.value;
     this.props.getEmailPosts({
-      params: {
-        type: 'email'
-      }
+      params: myParams
     });
   }
 
@@ -77,7 +87,7 @@ class Posts extends Component {
 
     return (
       <div className="feed">
-        <PostNavbar />
+        <PostNavbar getPostsToDisplay={this.getPostsToDisplay} />
         <SelectListGroup
           placeholder="type"
           name="type"

@@ -15,22 +15,36 @@ const validatePostInput = require('../../validation/post');
 // @desc    Get posts
 // @access  Public
 router.get('/', (req, res) => {
-  if (req.body.type) {
-    Post.find({ 'post.type': req.body.type })
-      .sort({ date: -1 })
-      .then(posts => res.json(posts))
-      .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));
-  } else {
-    Post.find()
-      .sort({ date: -1 })
-      .then(posts => res.json(posts))
-      .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));
-  }
+  // if (req.body.type) {
+  //   Post.find({ 'post.type': req.body.type })
+  //     .sort({ date: -1 })
+  //     .then(posts => res.json(posts))
+  //     .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));
+  // } else {
+  Post.find({ type: req.query['type'] })
+    .sort({ date: -1 })
+    .then(posts => res.json(posts))
+    .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));
+  // }
 });
 
 router.get('/search', (req, res) => {
   // if (req.body.type) {
-  Post.find({ type: 'email' })
+
+  // let searchQuery = {};
+  // if (req.params.type) {
+  //   searchQuery = { type: req.params.type };
+  // }
+
+  // var query = {
+  //   player: 'player'
+  // };
+
+  // if (obj.action) {
+  //   query.action = obj.action;
+  // }
+
+  Post.find({ type: req.query['type'] })
     .sort({ date: -1 })
     .then(posts => res.json(posts))
     .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));

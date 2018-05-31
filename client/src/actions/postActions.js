@@ -88,10 +88,10 @@ export const getPosts = () => dispatch => {
 };
 
 // Get Posts
-export const getEmailPosts = () => dispatch => {
+export const getEmailPosts = params => dispatch => {
   dispatch(setPostLoading());
   axios
-    .get('/api/posts/search')
+    .get('/api/posts/search', params)
     .then(res =>
       dispatch({
         type: GET_POSTS,

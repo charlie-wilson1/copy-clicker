@@ -34,7 +34,11 @@ class Posts extends Component {
 
     // alert(e.target.value);
     // this.state.type = e.target.value;
-    this.props.getEmailPosts();
+    this.props.getEmailPosts({
+      params: {
+        type: 'email'
+      }
+    });
   }
 
   render() {

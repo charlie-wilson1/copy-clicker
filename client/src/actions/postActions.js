@@ -87,6 +87,25 @@ export const getPosts = () => dispatch => {
     );
 };
 
+// Get Posts
+export const getEmailPosts = () => dispatch => {
+  dispatch(setPostLoading());
+  axios
+    .get('/api/posts/search')
+    .then(res =>
+      dispatch({
+        type: GET_POSTS,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_POSTS,
+        payload: null
+      })
+    );
+};
+
 // Get Post
 export const getPost = id => dispatch => {
   dispatch(setPostLoading());

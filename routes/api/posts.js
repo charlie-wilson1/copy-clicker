@@ -15,11 +15,42 @@ const validatePostInput = require('../../validation/post');
 // @desc    Get posts
 // @access  Public
 router.get('/', (req, res) => {
-  Post.find()
+  if (req.body.type) {
+    Post.find({ 'post.type': req.body.type })
+      .sort({ date: -1 })
+      .then(posts => res.json(posts))
+      .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));
+  } else {
+    Post.find()
+      .sort({ date: -1 })
+      .then(posts => res.json(posts))
+      .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));
+  }
+});
+
+router.get('/search', (req, res) => {
+  // if (req.body.type) {
+  Post.find({ type: 'email' })
     .sort({ date: -1 })
     .then(posts => res.json(posts))
     .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));
+  // } else {
+  //   Post.find()
+  //     .sort({ date: -1 })
+  //     .then(posts => res.json(posts))
+  //     .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));
+  // }
 });
+
+// @route   GET api/posts/
+// @desc    Get posts with search params
+// @access  Public
+// router.get('/', (req, res) => {
+//   Post.find()
+//     .sort({ date: -1 })
+//     .then(posts => res.json(posts))
+//     .catch(err => res.status(400).json({ nopostsfound: 'No posts found' }));
+// });
 
 // @route   GET api/posts/:id
 // @desc    Get post by id

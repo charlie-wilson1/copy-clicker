@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { getPosts, getEmailPosts } from '../../actions/postActions';
+import { connect } from 'react-redux';
 
 class PostNavbar extends Component {
+  onChange() {}
+
   render() {
     return (
       <div style={{ backgroundColor: 'white' }}>
@@ -57,4 +61,11 @@ class PostNavbar extends Component {
   }
 }
 
-export default PostNavbar;
+const mapStateToProps = state => ({
+  post: state.post
+});
+// export default ;
+
+export default connect(mapStateToProps, { getPosts, getEmailPosts })(
+  PostNavbar
+);

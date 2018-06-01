@@ -6,10 +6,12 @@
     "@tinymce/tinymce-react": "^2.2.5",
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
+    "draft-js": "^0.10.5",
     "jwt-decode": "^2.2.0",
     "moment": "^2.22.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-draft-wysiwyg": "^1.12.13",
     "react-moment": "^0.7.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
@@ -23,8 +25,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "babel-jest": "^23.0.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "jest": "^23.1.0",
+    "react-test-renderer": "^16.4.0"
+  }
 }

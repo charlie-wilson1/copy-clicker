@@ -218,3 +218,58 @@ h2 {
   background-color: limegreen;
   background: url('https://images.pexels.com/photos/4970/fashion-person-woman-hand.jpg?auto=compress&cs=tinysrgb&h=650&w=940');
 }
+
+/* editor */
+
+.demo-toolbar-custom {
+  border-color: rgb(0, 47, 126) !important;
+  background-color: #9ebef5 !important;
+}
+.demo-editor-custom {
+  height: 200px !important;
+  border: 1px solid #f1f1f1 !important;
+  padding: 5px !important;
+  height: 75% !important;
+  border-radius: 2px !important;
+  border-color: rgb(0, 47, 126) !important;
+}
+.demo-option-custom {
+  width: 15px !important;
+  height: 15px !important;
+  border-color: rgb(0, 47, 126) !important;
+  color: rgb(0, 47, 126);
+}
+.demo-option-custom-wide {
+  width: 125px !important;
+  height: 25px !important;
+  border-color: rgb(0, 47, 126) !important;
+  color: rgb(0, 47, 126) !important;
+}
+.demo-option-custom-medium {
+  height: 25px !important;
+  border-color: rgb(0, 47, 126) !important;
+  color: rgb(0, 47, 126) !important;
+}
+.demo-dropdown-custom {
+  border-color: rgb(0, 47, 126) !important;
+}
+.demo-popup-custom {
+  border-color: rgb(0, 47, 126) !important;
+  padding: 5px !important;
+}
+.demo-popup-custom input {
+  border-color: rgb(0, 47, 126) !important;
+}
+.demo-popup-custom button {
+  border-color: rgb(0, 47, 126) !important;
+}
+.demo-section-wrapper {
+  display: flex;
+}
+.demo-editor-wrapper {
+  width: 60%;
+}
+.demo-section {
+  margin: 50px 30px 20px;
+  width: 95%;
+}

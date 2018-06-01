@@ -13,40 +13,37 @@ import PrivateRoute from './components/common/PrivateRoute';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 
-// coropate pages
+// corporate pages
 import Landing from './components/layout/Landing';
-import Terms from './components/corporate/Terms';
 import TryIt from './components/corporate/TryIt';
 import Faq from './components/corporate/Faq';
+import Terms from './components/corporate/Terms';
+import Privacy from './components/corporate/Privacy';
 
 // auth pages
 import Signup from './components/auth/Register';
 import Login from './components/auth/Login';
 
+// not found
+import NotFound from './components/not-found/NotFound';
+
+// private pages
+import PostAdd from './components/post-add/PostAdd';
+import Posts from './components/posts/Posts';
+import PostsFeatured from './components/posts/PostsFeatured';
+import PostsMy from './components/posts/PostsMy';
+
+// old pages
 import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/create-profile/CreateProfile';
 import EditProfile from './components/edit-profile/EditProfile';
 import AddExperience from './components/add-credentials/AddExperience';
 import AddEducation from './components/add-credentials/AddEducation';
 import Profile from './components/profile/Profile';
-import PostAdd from './components/post-add/PostAdd';
-
-import NotFound from './components/not-found/NotFound';
-
-import Posts from './components/posts/Posts';
-import PostsFeatured from './components/posts/PostsFeatured';
-import PostsMy from './components/posts/PostsMy';
 
 import Post from './components/post/Post';
 
 import Profiles from './components/profiles/Profiles';
-
-import AddCopy from './components/copy/AddCopy';
-
-import Community from './components/community/Community';
-import Home from './components/home/Home';
-
-import Privacy from './components/corporate/Privacy';
 
 import { logoutUser } from './actions/authActions';
 
@@ -104,9 +101,6 @@ class App extends Component {
 
               {/* private */}
 
-              {/* <PrivateRoute exact path="/community" component={Community} /> */}
-              <PrivateRoute exact path="/home2" component={Home} />
-
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute
                 exact
@@ -120,6 +114,7 @@ class App extends Component {
               />
               <PrivateRoute exact path="/add-post" component={PostAdd} />
               <PrivateRoute exact path="/community" component={Posts} />
+
               <PrivateRoute exact path="/my-copy" component={PostsMy} />
 
               <PrivateRoute exact path="/home" component={PostsFeatured} />
@@ -135,7 +130,6 @@ class App extends Component {
                 path="/add-education"
                 component={AddEducation}
               />
-              <PrivateRoute exact path="/add-copy" component={AddCopy} />
               <Route exact path="/not-found" component={NotFound} />
 
               <Route component={NotFound} />

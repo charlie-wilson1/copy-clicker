@@ -7,6 +7,8 @@ import PostItem from '../posts/PostItem';
 import CommentForm from './CommentForm';
 import CommentFeed from './CommentFeed';
 import { Link } from 'react-router-dom';
+// import sanitizeHtml from 'sanitize-html';
+import sanitizeHtml from 'sanitize-html';
 
 class Post extends Component {
   componentDidMount() {
@@ -17,13 +19,28 @@ class Post extends Component {
 
     let postContent;
 
+    const clean = sanitizeHtml(post.body, {
+      allowedTags: ['b', 'i', 'em', 'strong', 'a'],
+      allowedAttributes: {
+        a: ['href', 'target']
+      }
+    });
+
     if (post === null || loading || Object.keys(post).length === 0) {
       postContent = <Spinner />;
     } else {
       postContent = (
         <div>
           <PostItem post={post} showActions={false} />
-          {post.body}
+
+          <div className="card card-body mb-3">
+            <div className="row">
+              <div className="col-md-12">
+                <div dangerouslySetInnerHTML={{ __html: post.body }} />
+              </div>
+            </div>
+          </div>
+          {/* dangerouslySetInnerHTML={post.body} {post.body} */}
           <CommentForm postId={post._id} />
           <CommentFeed postId={post._id} comments={post.comments} />
         </div>

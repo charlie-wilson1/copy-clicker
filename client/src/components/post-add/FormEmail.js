@@ -8,6 +8,7 @@ import { withRouter } from 'react-router-dom';
 
 import { addPost } from '../../actions/postActions';
 import SelectListGroup from '../common/SelectListGroup';
+import sanitizeHtml from 'sanitize-html';
 
 // jodit
 import 'jodit';
@@ -46,7 +47,7 @@ class FormEmail extends Component {
 
     const newPost = {
       subject: this.state.subject,
-      body: this.state.body,
+      body: this.state.content,
       type: 'email',
       name: user.name,
       avatar: user.avatar

@@ -21,7 +21,8 @@
     "react-typist": "^2.0.4",
     "react-typist-loop": "0.0.5",
     "redux": "^4.0.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "sanitize-html": "^1.18.2"
   },
   "scripts": {
     "start": "react-scripts start",

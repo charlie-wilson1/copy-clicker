@@ -273,3 +273,33 @@ h2 {
   margin: 50px 30px 20px;
   width: 95%;
 }
+
+/* JODIT */
+.jodit_container .jodit_workplace,
+.jodit_container .jodit_toolbar,
+.jodit_container .jodit_statusbar,
+.jodit_container
+  .jodit_toolbar
+  > li.jodit_toolbar_btn.jodit_toolbar_btn-separator,
+.jodit_container .jodit_toolbar > li.jodit_toolbar_btn.jodit_toolbar_btn-break {
+  border-color: #03002c;
+}
+.jodit_container .jodit_toolbar,
+.jodit_container .jodit_statusbar {
+  background-color: #50e3c2;
+}
+.jodit_container {
+  background-color: #ffffff;
+}
+.jodit_container .jodit_wysiwyg {
+  color: #000000;
+}
+.jodit_container
+  .jodit_toolbar
+  > li.jodit_toolbar_btn.jodit_with_dropdownlist
+  .jodit_with_dropdownlist-trigger {
+  border-top-color: #000000;
+}
+.jodit_container .jodit_placeholder {
+  color: #00000080;
+}

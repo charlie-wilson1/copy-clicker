@@ -57,20 +57,27 @@ class PostsFeatured extends Component {
   render() {
     const { posts, loading } = this.props.post;
 
-    let postContent;
+    let postContent, postContent2;
 
     if (posts === null || loading) {
       postContent = <Spinner />;
     } else {
       postContent = (
         <div>
+          {/* <section className="section-salmon"> */}
           {/* featured posts */}
           <div className="row">
             {posts
               .slice(0, 2)
               .map(post => <PostCard key={post._id} post={post} />)}
           </div>
+          {/* </section> */}
           {/* post feed  */}
+        </div>
+      );
+
+      postContent2 = (
+        <div>
           <PostFeed posts={posts.slice(2)} />
         </div>
       );
@@ -79,16 +86,23 @@ class PostsFeatured extends Component {
     return (
       <div className="feed">
         <PostNavbar getPostsToDisplay={this.getPostsToDisplay} />
-        <h3 className="text-center my-3 mt-4">🎉Welcome to CopyClicker!🚀</h3>
+        {/* <h3 className="text-center my-3 mt-4">🎉Welcome to CopyClicker!🚀</h3>
         <p className="text-center">
           <a className="text-center" href="">
             need help?
           </a>
-        </p>
+        </p> */}
+        <section className="section-salmon py-3">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12 mt-3">{postContent}</div>
+            </div>
+          </div>
+        </section>
 
-        <div className="container">
+        <div className="container py-3">
           <div className="row">
-            <div className="col-md-12 mt-3">{postContent}</div>
+            <div className="col-md-12 mt-3">{postContent2}</div>
           </div>
         </div>
       </div>

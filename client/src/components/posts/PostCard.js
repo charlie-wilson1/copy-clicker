@@ -47,7 +47,7 @@ class PostItem extends Component {
             {'  '}
             {post.type ? post.type.toUpperCase() : 'NO TYPE'}, 🔥 FEATURED
           </div>
-          <div class="card-body text-white bg-featured-email">
+          <div class="card-body">
             <h4 class="card-title">{post.text || post.subject}</h4>
             <p className="card-text">by {post.name}, posted 2 hours ago</p>
 

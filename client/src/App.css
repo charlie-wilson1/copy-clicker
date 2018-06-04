@@ -79,6 +79,23 @@
 h2 {
   font-family: 'Bree Serif', serif;
 }
+h4 {
+  font-family: 'Bree Serif', serif;
+}
+
+.green-text {
+}
+
+.card-header {
+  padding: 0 !important;
+}
+
+.post-icon {
+  background-color: #dddddd;
+  color: #000000 !important;
+  padding: 10px;
+  font-size: 20px;
+}
 .btn-2-login {
   background-color: #ffd561;
   color: #000000;

@@ -41,68 +41,52 @@ class PostItem extends Component {
 
     return (
       <div className="col-md-6">
-        <div className="card card-body mb-3 bg-featured-email text-light">
-          <div className="row">
-            <div className="col-md-12">
-              <p className="lead">
-                <i
-                  className={classnames('fas mx-2', icon)}
-                  style={{ fontSize: '40px' }}
-                />
-                FEATURED CONTENT
-              </p>
-              <p className="lead">
-                {/* <i
-                  className={classnames('fas mx-2', icon)}
-                  style={{ fontSize: '40px' }}
-                /> */}
-                {post.text || post.subject}
-              </p>
-              <hr />
-              <p className="lead">
-                {/* <i className={classnames('fas mx-2', icon)} /> */}
-                {post.body}
-              </p>
-              <p>by {post.name}</p>
-              {showActions ? (
-                <span>
-                  {' '}
+        <div class="card mb-3">
+          <div class="card-header">
+            <i className={classnames('fas px-2 post-icon', icon)} />
+            {'  '}
+            {post.type ? post.type.toUpperCase() : 'NO TYPE'}, 🔥 FEATURED
+          </div>
+          <div class="card-body text-white bg-featured-email">
+            <h4 class="card-title">{post.text || post.subject}</h4>
+            <p className="card-text">by {post.name}, posted 2 hours ago</p>
+
+            {showActions ? (
+              <span>
+                {' '}
+                <button
+                  onClick={this.onLikeClick.bind(this, post._id)}
+                  type="button"
+                  className="btn btn-light mr-1"
+                >
+                  <i
+                    className={classnames('fas fa-thumbs-up', {
+                      'text-info': this.findUserLike(post.likes)
+                    })}
+                  />
+                  <span className="badge badge-light">{post.likes.length}</span>
+                </button>
+                <button
+                  onClick={this.onUnlikeClick.bind(this, post._id)}
+                  type="button"
+                  className="btn btn-light mr-1"
+                >
+                  <i className="text-secondary fas fa-thumbs-down" />
+                </button>
+                <Link to={`/post/${post._id}`} className="btn btn-info mr-1">
+                  Comments
+                </Link>
+                {post.user === auth.user.id ? (
                   <button
-                    onClick={this.onLikeClick.bind(this, post._id)}
+                    onClick={this.onDeleteClick.bind(this, post._id)}
                     type="button"
-                    className="btn btn-light mr-1"
+                    className="btn btn-danger mr-1"
                   >
-                    <i
-                      className={classnames('fas fa-thumbs-up', {
-                        'text-info': this.findUserLike(post.likes)
-                      })}
-                    />
-                    <span className="badge badge-light">
-                      {post.likes.length}
-                    </span>
+                    <i className="fas fa-times" />
                   </button>
-                  <button
-                    onClick={this.onUnlikeClick.bind(this, post._id)}
-                    type="button"
-                    className="btn btn-light mr-1"
-                  >
-                    <i className="text-secondary fas fa-thumbs-down" />
-                  </button>
-                  <Link to={`/post/${post._id}`} className="btn btn-info mr-1">
-                    Comments
-                  </Link>
-                  {post.user === auth.user.id ? (
-                    <button
-                      onClick={this.onDeleteClick.bind(this, post._id)}
-                      type="button"
-                      className="btn btn-danger mr-1"
-                    >
-                      <i className="fas fa-times" />
-                    </button>
-                  ) : null}
-                </span>
-              ) : null}
-            </div>
+                ) : null}
+              </span>
+            ) : null}
           </div>
         </div>
       </div>

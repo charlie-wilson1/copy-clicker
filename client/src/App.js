@@ -23,6 +23,8 @@ import Privacy from './components/corporate/Privacy';
 // auth pages
 import Signup from './components/auth/Register';
 import Login from './components/auth/Login';
+import Forgot from './components/auth/Forgot';
+import Reset from './components/auth/Reset';
 
 // not found
 import NotFound from './components/not-found/NotFound';
@@ -96,6 +98,10 @@ class App extends Component {
               {/* auth */}
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/forgot" component={Forgot} />
+              <Route exact path="/reset" component={Reset} />
+
+              {/* not auth */}
               <Route exact path="/profiles" component={Profiles} />
               <Route exact path="/profile/:handle" component={Profile} />
 

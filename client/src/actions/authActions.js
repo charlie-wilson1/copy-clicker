@@ -23,6 +23,23 @@ export const registerUser = (userData, history) => dispatch => {
     );
 };
 
+export const forgotUser = (userData, history) => dispatch => {
+  axios
+    .post('api/users/forgot', userData)
+    .then(res => {
+      // toast
+      toast('Password reset email sent!');
+      // redirect
+      history.push('/');
+    })
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+
 // Login - get user token
 export const loginUser = (userData, history) => dispatch => {
   axios

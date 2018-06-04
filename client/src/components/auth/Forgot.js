@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import classnames from 'classnames';
-import { Link, withRouter } from 'react-router-dom';
-// import {Link} from 'react-router'
+import { withRouter } from 'react-router-dom';
+
 import { connect } from 'react-redux';
-import { loginUser } from '../../actions/authActions';
+import { forgotUser } from '../../actions/authActions';
 
 import TextFieldGroup from '../common/TextFieldGroup';
 
-class Login extends Component {
+class Forgot extends Component {
   constructor() {
     super();
 
@@ -46,12 +46,12 @@ class Login extends Component {
     e.preventDefault();
 
     const userData = {
-      email: this.state.email,
-      password: this.state.password
+      email: this.state.email
+      //   password: this.state.password
     };
 
     // console.log(user);
-    this.props.loginUser(userData, this.props.history);
+    this.props.forgotUser(userData, this.props.history);
   }
 
   render() {
@@ -67,9 +67,9 @@ class Login extends Component {
                   <div className="card">
                     <div className="card-body bg-white card-login">
                       {/* cb */}
-                      <h1 className="display-4 text-center">Log In</h1>
+                      <h1 className="display-4 text-center">Forgot Pass</h1>
                       <p className="lead text-center">
-                        Sign in to your CopyClicker account
+                        <strong>(BETA)</strong> Feature not ready yet
                       </p>
                       <form noValidate onSubmit={this.onSubmit}>
                         <TextFieldGroup
@@ -81,23 +81,20 @@ class Login extends Component {
                           error={errors.email}
                         />
 
-                        <TextFieldGroup
+                        {/* <TextFieldGroup
                           placeholder="Password"
                           name="password"
                           type="password"
                           value={this.state.password}
                           onChange={this.onChange}
                           error={errors.password}
-                        />
+                        /> */}
 
                         <input
                           type="submit"
                           className="btn btn-lg btn-info btn-block mt-4 rounded-0 btn-submit"
                         />
                       </form>
-                      <div className="text-center mt-3">
-                        <Link to="/forgot">Forgot password?</Link>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -110,8 +107,8 @@ class Login extends Component {
   }
 }
 
-Login.propTypes = {
-  loginUser: PropTypes.func.isRequired,
+Forgot.propTypes = {
+  forgotUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
@@ -121,4 +118,4 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { loginUser })(withRouter(Login));
+export default connect(mapStateToProps, { forgotUser })(withRouter(Forgot));
